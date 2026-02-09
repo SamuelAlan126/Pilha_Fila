@@ -52,13 +52,15 @@ namespace filaePilha
 
         private void btnRemoverF_Click(object sender, EventArgs e)
         {
-            fila.Dequeue();
+            if (fila.Count > 0)
+                fila.Dequeue();
             AtualizarFila();
         }
 
         private void btnRemoverP_Click(object sender, EventArgs e)
         {
-             pilha.Pop();
+            if (pilha.Count > 0)
+                pilha.Pop();
             AtualizarPilha();
         }
 
